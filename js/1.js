@@ -110,12 +110,51 @@ const personalMovieDB = {
     privat: false
 };
 
-const a = prompt('Last film', ''),
-      b = +prompt('Rate film', ''),
-      c = prompt('Last film', ''),
-      d = +prompt('Rate film', '');
+// const a = prompt('Last film', ''),
+//       b = +prompt('Rate film', ''),
+//       c = prompt('Last film', ''),
+//       d = +prompt('Rate film', '');
       
-personalMovieDB.movies[a] = b;
-personalMovieDB.movies[c] = d;
+// personalMovieDB.movies[a] = b;
+// personalMovieDB.movies[c] = d;
+
+for (let i = 0; i < 2; i++) {
+    const a = prompt('Last film', ''),
+          b = +prompt('Rate film', '');
+
+    if (a != null && b != null && a != '' && b != '' && a.length < 50) {
+        personalMovieDB.movies[a] = b; 
+        console.log('done');
+    } else {
+        console.log('error');
+        i--;
+    }
+}
 
 console.log(personalMovieDB);
+
+
+
+// const num = 50;
+
+// switch (num) {
+//     case 49: 
+//         console.log('False');
+//         break;
+//     case 100: 
+//         console.log('False');
+//         break;
+//     case 50: 
+//         console.log('True');
+//         break;
+//     default: 
+//         console.log('sorry');
+//         break;
+// }
+
+// let num = 50;
+
+// while (num < 55) {
+//     console.log(num);
+//     num++;
+// }
